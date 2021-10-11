@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glasses</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+.clr{clear: both;}
+p,span,i{
+    cursor: pointer;
+}
+    .bg1{background-color: orange;}
+      
+        .bg2{background-color: chartreuse;}
+        .bg3{background-color: black;}
+        .bg4{background-color:deeppink;}
+
+h1{
+    font-size: 80px;
+    text-align:left;
+    font-family: 'Inconsolata', monospace;
+    margin-top: 4%;
+    margin-bottom: 2%;
+}
+h2{
+    font-size: 70px;
+    margin-top: 5%;
+}
+        .nav_section {
+            height: 200px;
+            width: 100%;
+            /* background-color: aqua; */
+            position: relative;
+        }
+
+        .help {
+            position: absolute;
+            height: 100px;
+            width: 15%;
+            /* background-color: teal; */
+            left: 2%;
+            top: 7vh;
+        }
+
+        .help p {
+            font-size: 20px;
+            padding: 4%;
+        }
+
+        .help i {
+            color: orange;
+            margin-left: 1%;
+        }
+
+        .googles {
+            position: absolute;
+            width: 49%;
+            height: 150px;
+            left: 25%;
+            top: 5vh;
+            /* background-color: violet; */
+            text-align: center;
+        }
+
+        .googles ul li {
+            display: inline;
+            list-style: none;
+            font-size: 16px;
+            margin: 5%;
+        }
+
+        .googles p {
+            font-size: 60px;
+            text-shadow: 2px 2px 3px rgb(0 0 0 / 26%);
+            color: #454546;
+            margin: 0;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            margin-bottom: 2%;
+
+        }
+
+        hr {
+            border: 1px solid green;
+            border-radius: 5px;
+            margin-bottom: 4%;
+        }
+
+        .mycart {
+            width: 20%;
+            position: absolute;
+            right: 0.2%;
+            top: 9vh
+        }
+
+        .mycart input {
+            background-color: white;
+            font-size: 15px;
+            width: 160px;
+            height: 50px;
+            font-family: inherit;
+            margin-left: 5%;
+           
+        }
+        .banner_section_1st
+        {
+            height:600px;
+            width: 100%;
+            background: url(image/banner2.jpg) no-repeat;
+            background-size: 100%;
+        }
+        .wrapper1{
+            position: relative;
+            height:600px;
+            width: 100%;
+            background-color: rgba(255,255,255,0.10);
+        }
+        
+        #left1{
+            position: absolute;
+            color: red;
+            /* background-color: red; */
+            font-size: 30px;
+            top:35vh;
+            left:2%;
+           
+        }
+        #right1{
+            position: absolute;
+            right:1%;
+            /* background-color: red; */
+            color: red;
+            font-size: 30px;
+            top:35vh;
+            right:2%;
+        }
+        .box1{
+            position: absolute;
+            color: white;
+            text-align: center;
+            top: 25vh;
+            left: 26%;
+            font-family: 'Inconsolata', monospace;
+        }
+       
+        .box1 p{
+            font-size: 80px;
+            margin-bottom:5% ;
+        }
+        .box1 span{
+            font-size: 25px;
+           
+        }
+        .box1 input{
+            margin-top:5% ;
+            width:140px;
+            height:50px;
+            background-color: rgba(255,255,255,0.00);
+            border: 1px solid red;
+            color: white;
+            font-size: 20px;
+        }
+        #m1{
+            display: none;
+        }
+       
+        #w1{
+            display: none;
+        }
+        #wf{
+            display: none;
+        }
+        /* sales section */
+       
+        .box2{
+            height:440px;
+            width:332px;
+            /* background-color: aqua; */
+            float: left;
+            margin-left: 2.5%;
+            margin-top: 3%;
+            text-align: center;
+            position: relative;
+        }
+        .box2:hover{
+            background-color: rgb(33,159,243);
+        }
+        .tag{
+            position: absolute;
+            height: 30px;
+            width:100px;
+            left:1%;
+            top:4%;
+            background-color: rgb(255,193,7);
+            z-index: +1;
+            font-size: 25px;
+
+        }
+        /* banner3 */
+        .ban3
+        {
+            height: 400px;
+            width:100%;
+            background: url(image/banner-mid.jpg) no-repeat;
+            background-size: 100%;
+            margin-top: 3%;
+            margin-bottom: 1%;
+            padding:5%;
+        }
+        /* rectangle box with circle hover */
+        .rec_box{
+            height:350px;
+            width:45%;
+            margin-left: 3.3%;
+            background-color: teal;
+            float: left;
+            position: relative;
+            margin-top: 2%;
+            margin-bottom: 4%;
+          
+        }
+        .rec_box h1{
+            text-align: center;
+        }
+        #girl{
+            background: url(image/banner1.jpg) no-repeat;
+            background-size: 100%;               
+        }
+        #boy{
+            background: url(image/banner4.jpg) no-repeat;
+            background-size: 100%;     
+        }
+        .corner{
+            position: absolute;
+            height: 250px;
+            width:250px;
+            left:70%;
+            top:40%;
+            background-color:rgba(255,255,255,0.70);
+            /* border-radius: 50% 50% 0% 50%; */
+            border-radius: 50%;
+            display: none;
+            text-align: center;
+            
+        }
+        .corner h1{
+            font-size: 20px;
+            margin-top: 35%;
+        }
+      /* mid section cards and poster */
+      .mid_section{
+      height: 800px;
+           width:100%;
+           background-color: white;
+       }
+
+      .mid_section h2{
+           font-size: 70px;           
+           padding-top: 15vh;
+           padding-left: 73vh;
+           font-family: 'Inconsolata', monospace;
+       }
+       .banner2_L{
+           height:650px;
+        float: right;
+        width:50%;
+        background-image: url(image/profile.jpg);
+        background-size: 100%;
+        margin-top: 2%;
+       }
+       .card{
+           float: left;
+           height:300px;
+           width:22%;
+          /* background-color: rgb(246,11,14); */
+          background-image: linear-gradient(#4cb8c4,#3cd3ad);
+           margin-left: 2%;
+           margin-top: 2%;
+           padding:1%;
+           text-align: center;
+       }
+       .card i{
+          color:orange;
+          margin-top: 20px;
+      }
+      .card p{
+          text-align: center;
+          font-size: 25px;
+          margin-top: 3vh;
+          margin-bottom: 3vh;
+      }
+      .card span{        
+          text-align: center;
+          margin-left: 10px;
+      }
+      .card:hover{
+          /* background-color: rgb(33,159,243); */
+          background-image: linear-gradient(#2193b0,#6dd5ed);
+      }
+       /* END : MID SECTION ( CARDS AND POSTER SECTION )*/
+       
+       /* happy customer */
+       .banner_3{
+           height:500px;
+           /* background-image: linear-gradient(to bottom right,#e55d87,#5fc3e4); */
+         
+           width:100%;
+           margin-top :5%;
+           background: url(image/happy1.jpg);
+           background-size: 100%;
+       }
+       .B3_left_text
+       {
+            font-size: 60px;
+            color:white;
+            float: left;            
+            /* background-color: orchid; */
+            width:50%;
+            height:400px;
+            
+       }         
+       .B3_right{
+           float:right;
+           height:400px;
+           /* background-color: palegreen; */
+           width:50%;
+       }
+       .B3_left_text p
+       {
+            font-size:20px;
+            color:black;
+            float: left;
+            margin-left: 13vh;
+            margin-bottom: 5vh;
+          }
+       .years
+       {
+            font-size: 30px;
+            color:white;
+           }
+     
+       .col{
+           float: left;
+           height:220px;
+           width:170px;
+           background-color: rgba(255, 255, 255,0.00);
+           margin-left: 4%;
+           margin-top:7vh;
+       }
+      
+       .B3_head{
+           padding-top: 7vh;
+           margin-left: 10vh;
+           margin-bottom: 5vh;
+       }
+       h3{
+           float: left;
+       }
+       .col p
+       {
+            font-size:20px;
+            color:black;
+            float: left;
+            margin-left: 2vh;
+            margin-top: 2vh;
+       }
+       .col span
+       {
+            font-size:30px;
+            color:crimson;
+            float: left;
+            margin-left: 2vh;
+            margin-top: 3vh;
+          
+       }
+       .col i{
+           margin-top: 3vh;
+           float:left;
+           margin-left: 1vh;
+           margin-right: 8vh;
+           /* color:#a5cc82;
+            */
+            color: black;
+       }
+
+       /* footer section */
+       .footer{
+           height:400px;
+           background-image: linear-gradient(black,black);
+           width:100%;
+            }
+            .footer p{
+                color:white;
+                text-align: center;
+                font-size: 20px;
+                color:grey;
+                margin-top: 2%;
+            }
+            .footer_links{
+                float:right;
+                width:50%;
+                text-align: right;
+              
+                padding-right: 6%;
+                color:white;
+            }
+            .footer_logos{
+                float:right;
+                width:40%;   
+                margin-top: 8%;   
+                text-align: right;   
+                margin-right: 6%;                                 
+            }
+            .footer_logos i{
+               color:white;
+              padding:2%;
+            }
+            .footer_links ul li{
+                display: inline;
+            }
+            .footer_links ul li a{
+                text-decoration: none;
+                color: white;
+                margin-left: 3%;
+                font-size:22px;
+                margin-top: 3%; 
+            }
+            .display_foot{
+           float: left;
+           font-size:4em;
+           text-align:left;
+           color: white;
+          padding-top: 10vh;
+           padding-left: 5%;
+       }
+       #name{
+           float:left;
+           margin-left: 10%;
+           margin-top:2%;
+           color:orange;
+       }
+       /* END :FOOTER SECTION */
+       .thanku{
+           text-align: center;
+           font-size: 50px;
+           padding:8%;
+           background-color: black;
+           color: white;
+           
+       }
+       .thanku i{
+           color: white;
+       }
+       .box2 p{
+        margin-top:1%;
+           font-size: 25px;
+           margin-bottom: 3%;
+           color: orange;
+       }
+       .box2 span{
+        font-size: 25px;
+        color:white;
+       }
+       .box2 i{
+           padding-top:5%;
+           color: orange;
+       }
+       #row2{
+           display: none;
+       }
+    </style>
+</head>
+
+<body>
+    <div class="nav_section">
+        <div class="help">
+            <p>Need Help</p>
+            <p><i class="fas fa-phone"></i>&nbsp; &nbsp;12345678009</p>
+        </div>
+        <div class="googles">
+            <p>GOOGLES</p>
+            <hr>
+            <ul>
+                <li style="color: orange;">Home</li>
+                <li>About</li>
+                <li>Features <i class="fas fa-caret-down"></i></li>
+                <li>Shop<i class="fas fa-caret-down"></i></li>
+                <li>Contact</li>
+                <li><i class="fas fa-search"></i></li>
+            </ul>
+        </div>
+        <div class="mycart">
+            <i class="fas fa-user"></i>
+            <input type="button" value="My Cart">
+        </div>
+    </div>
+    <!-- banner section -->
+    <div id="banner"class="banner_section_1st">
+        <div class="wrapper1">
+          
+                <div id="left1"><i onclick="change_img(0)"class="fas fa-angle-left"></i></div>            
+                <div id="right1"><i onclick="change_img(1)"class="fas fa-angle-right"></i></div>
+                <div class="box1"id="m1">
+                    <p>men’s & women's eyewear</p>
+                    <span>Cool summer sale 50% off</span>
+                    <br>
+                    <input type="button" value="Shop Now">
+                </div>
+                <div class="box1"id="w1">
+                    <p>Women’s eyewear</p>
+                    <span>Cool summer sale 60% off</span>
+                    <br>
+                    <input type="button" value="Shop Now">
+                </div>
+                <div class="box1" id="mf">
+                    <p>men’s fashionwear</p>
+                    <span>Want to Look Your Best?
+                    </span>
+                    <br>
+                    <input type="button" value="Shop Now">
+                </div>
+                <div class="box1" id="wf">
+                    <p>Women’s eyewear</p>
+                    <span>Want to Look Your Best?
+                    </span>
+                    <br>
+                    <input type="button" value="Shop Now">
+                </div>
+     
+        </div>
+    </div>
+    <!-- sales section -->
+    <!-- 8 boxes -->
+    <div class="row1">
+        <h1>New Arrivals for You</h1>
+        <div class="box2">
+            <div class="tag">New</div>
+           <!-- <script>
+               tagy();
+           </script> -->
+            <img src="image/m1.jpg" height="300px" width="100%" alt="">
+            <p>84 WoodLand St Cocoa </p>
+            <span>575$</span>
+            <br>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            
+        </div>
+        <div class="box2"> 
+            <div class="tag">new</div>
+            <img src="image/m2.jpg" height="300px" width="100%" alt="">           
+            <p>84 WoodLand St Cocoa </p>
+            <span>575$</span>
+            <br>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            
+        </div>
+        <div class="box2"> <img src="image/m3.jpg" height="300px" width="100%" alt="">
+            <div class="tag">new</div>
+        <p>84 WoodLand St Cocoa </p>
+            <span>575$</span>
+            <br>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            
+        </div>
+        <div class="box2"> <img src="image/m4.jpg" height="300px" width="100%" alt="">
+            <div class="tag">new</div>
+        <p>84 WoodLand St Cocoa </p>
+            <span>575$</span>
+            <br>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            
+        </div>
+        <div class="box2"> <img src="image/s1.jpg" height="300px" width="100%" alt="">
+            <div class="tag">new</div>
+        <p>84 WoodLand St Cocoa </p>
+            <span>575$</span>
+            <br>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            
+        </div>
+        <div class="box2"> <img src="image/s2.jpg" height="300px" width="100%" alt="">
+            <div class="tag">new</div>
+        <p>84 WoodLand St Cocoa </p>
+            <span>575$</span>
+            <br>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            
+        </div>
+        <div class="box2"> <img src="image/s3.jpg" height="300px" width="100%" alt="">
+            <div class="tag">new</div>
+        <p>84 WoodLand St Cocoa </p>
+            <span>575$</span>
+            <br>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            
+        </div>
+        <div class="box2"> <img src="image/s4.jpg" height="300px" width="100%" alt="">
+            <div id="tag"class="tag">new</div>
+        <p>84 WoodLand St Cocoa </p>
+            <span>575$</span>
+            <br>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            
+        </div>
+    </div>
+       <!-- banner between boxes -->
+       <div class="clr"></div>
+    <div class="ban3"></div>
+    <!-- 4 boxes hide and show -->
+    <div id="row1" class="row1">
+       
+        <div class="box2"><img src="image/s1.jpg" height="300px" width="100%" alt="">
+        <p>84 WoodLand St Cocoa </p>
+        <div class="tag" style="background-color: rgb(246,11,14);">New</div>
+            <span>575$</span>
+            <br>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            
+        </div>
+        <div class="box2"><img src="image/s2.jpg" height="300px" width="100%" alt="">
+            <div class="tag" style="background-color: rgb(246,11,14);">New</div>
+        <p>84 WoodLand St Cocoa </p>
+            <span>575$</span>
+            <br>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            
+        </div>
+        <div class="box2"><img src="image/s3.jpg" height="300px" width="100%" alt="">
+            <div class="tag" style="background-color: rgb(246,11,14);">New</div>
+        <p>84 WoodLand St Cocoa </p>
+            <span>575$</span>
+            <br>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            
+        </div>
+        <div class="box2"><img src="image/s4.jpg" height="300px" width="100%" alt="">
+            <div class="tag" style="background-color: rgb(246,11,14);">New</div>
+        <p>84 WoodLand St Cocoa </p>
+            <span>575$</span>
+            <br>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            
+        </div>       
+    </div>
+    <div id="row2"class="row2">
+       
+        <div class="box2"><img src="image/s8.jpg" height="300px" width="100%" alt="">
+            <div class="tag">new</div>
+        <p>84 WoodLand St Cocoa </p>
+            <span>575$</span>
+            <br>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            
+        </div>
+        <div class="box2"><img src="image/s6.jpg" height="300px" width="100%" alt="">
+        <p>84 WoodLand St Cocoa </p>
+            <span>575$</span>
+            <br>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            
+        </div>
+        <div class="box2"><img src="image/s7.jpg" height="300px" width="100%" alt="">
+        <p>84 WoodLand St Cocoa </p>
+            <span>575$</span>
+            <br>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            
+        </div>
+        <div class="box2"><img src="image/g3.jpg" height="300px" width="100%" alt="">
+        <p>84 WoodLand St Cocoa </p>
+            <span>575$</span>
+            <br>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            
+        </div>       
+    </div>
+    <!-- 2boxes with circles hovers -->
+    <div>
+        <div id="girl" class="rec_box" onclick="fun1(0)">
+            <div id="cornerL"class="corner">
+               <h1>How are You ? <br>Boys</h1>
+            </div>
+        </div>
+        <div id="boy"class="rec_box" onclick="fun1(1)">
+            <div id="cornerR"class="corner">
+                <h1>How are You ? <br>Girls</h1>
+            </div>
+        </div>
+    </div>
+    <!-- cards and poster -->
+    <div class="mid_section">
+        <h2>What We do</h2>
+        <div class="banner2_L">
+        </div>
+        <div class="card">
+            <i class="fab fa-gratipay fa-4x"></i>
+            <p>Satisfication</p>
+           
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ut nulla molestias, dicta quod adipisci.</span>
+        </div>
+        <div class="card">
+            <i class="fas fa-hands fa-4x"></i>
+            <p>Belief</p>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ut nulla molestias, dicta quod adipisci.</span>
+        </div>
+        <div class="card">
+            <i class="fas fa-handshake fa-4x"></i>
+            <p>Promise</p>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ut nulla molestias, dicta quod adipisci.</span>
+        </div>
+        <div class="card">
+            <i class="fas fa-hand-holding fa-4x"></i>
+            <p>Progress</p>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ut nulla molestias, dicta quod adipisci.</span>
+        </div>
+    </div>
+    <div class="clr"></div>
+    <!-- happy customers -->
+    <div class="banner_3">
+        <div class="B3_left_text">
+            <div class="B3_head">Years In The Field</div> 
+            
+                   <p>Lorem ipsum dolor sit amet consectetur adipisipa, <br> ducimus nats, necessitatibus ab iste. Fuga quiae.</p>
+                 
+                    <p class="years"><span style="color: orange; font-size: 40px;">20+</span> &nbsp;Years of Experience</p>
+         
+        </div>
+        <div class="B3_right">
+           <div class="col">
+             <p>Delighted Customers</p> <br>
+               <span>12K</span>
+               <br>
+               <i class="fas fa-hand-holding-heart fa-6x"></i>
+    
+           </div>
+           <div class="col">
+            <p>Helped Customers</p> <br>
+            <span>12K</span>
+            <br>
+            <i class="fas fa-hands-helping fa-6x"></i>
+           </div>
+           <div class="col">
+            <p>Earning Customers</p> <br>
+            <span>12K</span>
+            <br>
+            <i class="fas fa-hand-holding-usd fa-6x"></i>
+           </div>
+        </div>
+    </div>
+    <div class="thanku">
+        <i class="fas fa-praying-hands fa-4x"></i> , THANK YOU 
+    </div>
+    <!-- footer -->
+    <div class="footer ">
+        <div class="display_foot"> get in touch <br>
+         with us
+     </div>
+     <div class="footer_logos">
+         <i class="fab fa-facebook "></i>
+         <i class="fab fa-twitter "></i>
+         <i class="fab fa-google "></i>
+         <i class="fab fa-instagram "></i>
+     </div>
+     <div class="footer_links">
+         <ul>
+             <li><a href="#">Home</a></li>
+             <li><a href="#">About us</a></li>
+             <li><a href="#">Services</a></li>
+             <li><a href="#">Gallery</a></li>
+             <br>
+             <li><a href="#">Subscribe</a></li>
+             <li><a href="#">Contact</a></li>
+         </ul>
+     </div>
+     <div class="clr"></div>
+     <br>
+     <br><br>
+     <hr>
+     <p>&copy; Commute . All rights reserved | Design by W3layouts</p>
+     </div>
+    <script>
+        function change_img(value)
+        {
+            if(value==0)
+            {
+                document.getElementById('banner').style.backgroundImage="url(image/banner1.jpg)";
+                document.getElementById('mf').style.display='block';
+                document.getElementById('wf').style.display='none';
+                document.getElementById('m1').style.display='none';
+            }
+            
+            else if(value==1)
+            {
+            document.getElementById('banner').style.backgroundImage="url(image/banner4.jpg)";
+            document.getElementById('wf').style.display='block';
+            document.getElementById('mf').style.display='none';
+            document.getElementById('m1').style.display='none';
+            }
+            else
+            document.getElementById('banner').style.backgroundImage="url(image/banner2.jpg)";
+        }
+        function fun1(v)
+        {
+            if(v==0)
+            {
+            if(document.getElementById('cornerL').style.display=='block')
+         document.getElementById('cornerL').style.display ="none"
+         else
+         document.getElementById('cornerL').style.display ="block";
+        }
+        if(v==1)
+        {
+         if(document.getElementById('cornerR').style.display=='block')
+         document.getElementById('cornerR').style.display ="none"
+         else
+         document.getElementById('cornerR').style.display ="block";
+        }
+            // if(v==0)
+            // document.getElementById('cornerL').style.display='block';
+            // if(v==1)
+            // document.getElementById('cornerR').style.display='block';
+        }
+        function tagy(v)
+        {
+            if(v==1)
+            {
+                document.write("<div class='tag'>New</div>");   
+                document.getElementById('tag').style.color='rgb(246,11,14)'; 
+            }
+           
+            else if(v==2)
+            {
+                document.write("<div class='tag'>New</div>");
+            
+            document.getElementById('tag').style.color='rgb(255,193,7)';
+            }
+            else if(v==3)
+            {
+                document.write("<div class='tag'>New</div>");
+            document.getElementById('tag').style.color='rgb(33,159,243)';
+            }
+            else 
+            {
+
+                document.write("<div class='tag'>New</div>");
+            
+            document.getElementById('tag').style.color='rgb(246,11,14)';
+            }
+        }
+    </script>
+</body>
+
+</html>

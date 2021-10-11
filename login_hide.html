@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Hide</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <style>
+        *{margin:0;
+        padding: 0;
+    box-sizing: border-box;}
+        .nav{
+            height:100px;
+            width:90%;
+            margin: auto;
+            background-color: teal;
+        }
+        .nav ul li{
+        display: inline;
+        line-height: 100px;
+        color: white;
+        margin-left: 3%;
+        cursor: pointer;
+        }
+        .login_box{
+            height:300px;
+            width:400px;
+            /* background-color: red; */
+            margin-left: 5%;
+            background-image: url(image/backpc.jpg);
+            background-size: 100%;
+            display: none;
+        }
+        .login_box input{
+            margin-top: 5%;
+            margin-left: 23%;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li onclick="control()"> <i class="fas fa-user "></i> </li>
+            <li>Home</li>
+            <li>About us</li>
+            <li>Mail</li>
+            <li>get</li>
+        </ul>
+    </div>
+    <div id="form"class="login_box">
+        <!-- <img src="image/login.jpg" alt="" height="100px" width="100%"> -->
+        <form>
+        <input type="email" placeholder="enter email"> ;
+        <input type="password" placeholder="enter password"> ;
+        <br>
+        <input  style="margin-left: 40%"type="submit" value="login" >
+    </form>
+    </div>
+    <script>
+     function control()
+     {
+         if(document.getElementById('form').style.display=='none')
+         document.getElementById('form').style.display ="block"
+         else
+         document.getElementById('form').style.display ="none";
+     }
+     
+    </script>
+</body>
+</html>
+<!-- 
+      function control()
+        {
+            if(value==1)
+            document.getElementById('hide').style.display="none";
+            else if(value==2)
+            document.getElementById('hide').style.display="block";
+        }
+ -->
